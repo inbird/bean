@@ -4,11 +4,17 @@ import com.example.bean.test.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+@Configuration(proxyBeanMethods = false)
+//@Configuration
 public class AppConfig {
 
     @Bean
     public Hello getHello(){
+        return new HelloKoreaImpl();
+    }
+
+    @Bean
+    public Hello getHello2(){
         return new HelloKoreaImpl();
     }
 
@@ -21,5 +27,4 @@ public class AppConfig {
     public Pay getPay(){
         return new PayImpl(getHello(), getDiscount());
     }
-
 }

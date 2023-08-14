@@ -11,7 +11,7 @@ public class PayImpl implements Pay{
 
     @Override
     public void pay() {
-        System.out.println("FROM PayImpl => hello + discount");
+        System.out.println("(PayImpl)Hello Object: [" + this.hello + "]");
         hello.sayHello();
         discount.discount();
 
