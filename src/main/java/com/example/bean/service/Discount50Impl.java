@@ -1,4 +1,4 @@
-package com.example.bean.test;
+package com.example.bean.service;
 
 public class Discount50Impl implements Discount{
     @Override

@@ -1,4 +1,4 @@
-package com.example.bean.test;
+package com.example.bean.service;
 
 public interface Discount {
     void discount();

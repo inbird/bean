@@ -1,4 +1,4 @@
-package com.example.bean.test;
+package com.example.bean.service;
 
 public class HelloEnglishImpl implements Hello {
     @Override

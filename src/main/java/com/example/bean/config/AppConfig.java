@@ -1,30 +1,24 @@
 package com.example.bean.config;
 
-import com.example.bean.test.*;
+import com.example.bean.service.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration(proxyBeanMethods = false)
-//@Configuration
+@Configuration
 public class AppConfig {
 
     @Bean
-    public Hello getHello(){
+    public Hello helloBean(){
         return new HelloKoreaImpl();
     }
 
     @Bean
-    public Hello getHello2(){
-        return new HelloKoreaImpl();
-    }
-
-    @Bean
-    public Discount getDiscount(){
+    public Discount discountBean(){
         return new Discount50Impl();
     }
 
     @Bean
-    public Pay getPay(){
-        return new PayImpl(getHello(), getDiscount());
+    public Pay payBean(){
+        return new PayImpl(helloBean(), discountBean());
     }
 }
